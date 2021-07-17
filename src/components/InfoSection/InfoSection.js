@@ -12,7 +12,7 @@ const InfoSection = ({lightBg, imgStart, topLine, headline, description, primary
         <Fragment>
             <InfoSec lightBg={lightBg}>
                 <Container>
-                    <InfoRow imgStart={imgStart}>
+                    <InfoRow id="test" imgStart={imgStart}>
                         <InfoColumn>
                             <TextWrapper>
                                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>

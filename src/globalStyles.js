@@ -36,7 +36,7 @@
     border: none;
 
     &:hover {
-        transition: all 0.3s ease-out
+        transition: all 0.3s ease-out;
         background: ${({primary}) => (primary? '#0467FB' : '#4B59F7')};
     }
 

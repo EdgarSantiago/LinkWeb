@@ -71,17 +71,16 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
 height: 80px;
 border-bottom: 2px solid transparent;
-
 &:hover {
-    border-bottom: 2px solid #4b509f7
+    border-bottom: 2px solid 4b509f7;
 }
 
-@media screen and (max-width: 960px) {
-    width: 100%;
+    @media screen and (max-width: 960px) {
+        width: 100%;
 
-    &:hover {
-        border:none;
-    }
+        &:hover {
+            border:none;
+        }
 }
 `
 

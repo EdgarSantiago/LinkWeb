@@ -3,16 +3,20 @@
  export const InfoSec = styled.div`
     color: #fff;
     padding: 160px 0;
-    background: ${({lightBg}) => (lightBg ? '#fff' : '#101522')}
+    background: ${({lightBg}) => (lightBg ? '#fff' : '#101522')};
  `
 
- export const InfoRow = styled.div`
+    export const InfoRow = styled.div`
+    padding-left: 150px;
     display: flex;
     margin: 0 -15px -15px -15px;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')}
- `
+    flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')};
+    @media screen and (max-width:1365px){
+        padding-left: 0;
+    }
+    `
 
 export const InfoColumn = styled.div`
     margin-bottom: 15px;
@@ -20,14 +24,13 @@ export const InfoColumn = styled.div`
     margin-left: 15px;
     flex: 1;
     max-width: 50%;
-    flex-basics: 50%;
 
     @media screen and (max-width:768px){
         max-width: 100%;
-        flex-basics: 100%;
+        flex-basis: 100%;
         display: flex;
         justify-content: center;
-    }
+}
 `
 
 export const TextWrapper = styled.div`
@@ -41,7 +44,7 @@ export const TextWrapper = styled.div`
 `
 
 export const TopLine = styled.div`
-    color : ${({LightTopLine}) => (LightTopLine ? '#f7f8fa' : '#1c2237')}
+    color : ${({lightTopLine}) => (lightTopLine ? '#f7f8fa' : '#1c2237')};
     font-size: 18px;
     line-height: 16px;
     letter-spacing: 1.4px;
@@ -52,20 +55,20 @@ export const Heading = styled.h1`
     margin-bottom: 24px;
     font-size: 48px;
     line-height: 1.1;
-    color: ${({lightText}) => (lightText? '#f7f8fa' : '#1c2237' )}
+    color: ${({lightText}) => (lightText? '#f7f8fa' : '#1c2237' )};
 `
 export const SubTitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({lightTextDesc}) => (lightTextDesc? '#f7f8fa' : '#1c2237' )}
+    color: ${({lightTextDesc}) => (lightTextDesc? '#f7f8fa' : '#1c2237' )};
 `
 
 export const ImgWrapper = styled.div`
     max-width: 555px;
     display: flex;
-    justify-content: ${({start}) => (start? 'flex-start' : 'flex-end')} 
+    justify-content: ${({start}) => (start? 'flex-start' : 'flex-end')};
 `
 
 export const Img = styled.img`
