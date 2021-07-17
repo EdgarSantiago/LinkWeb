@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import {Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavItem, NavLinks} from './Navbar.elements'
+import React, {useState, useEffect} from 'react'
+import {Nav, NavbarContainer, NavLogo, NavIcon, MobileIcon, NavMenu, NavItem, NavLinks, NavItemBtn,
+    NavBtnLink,} from './Navbar.elements'
 import {FaTimes, FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
 import {Fragment} from 'react'
@@ -19,6 +20,11 @@ const Navbar = () => {
         }
     }
 
+        useEffect(() => {
+            showButton()
+        }, [])
+
+        window.addEventListener('resize', showButton)
     return (
         <Fragment>
         <IconContext.Provider value={{color: "#fff"}}>
@@ -41,6 +47,17 @@ const Navbar = () => {
                     <NavItem>
                         <NavLinks to="/">Contato</NavLinks>
                     </NavItem>
+                    <NavItemBtn>
+                        {button ? (
+                            <NavBtnLink>
+                                <Button primary>Login</Button>
+                            </NavBtnLink>
+                                ) : (
+                                    <NavBtnLink>
+                                        <Button fontBig primary>Login</Button>
+                                    </NavBtnLink>
+                                )}
+                    </NavItemBtn>
                 </NavMenu>
             </NavbarContainer>
         </Nav>
