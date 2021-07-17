@@ -1,3 +1,4 @@
+import { FaMagento } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -80,7 +81,7 @@ export const FooterLinksWrapper = styled.div`
             }
 `
 
-export const FooterLinksItems = styled.div`
+export const FooterLinkItems = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -122,7 +123,7 @@ export const SocialMediaWrap = styled.div`
     align-items: center;
     width: 90%;
     max-width: 1000px;
-    margin: 40px auto - auto;
+    margin: 40px auto 0 auto;
             @media screen and (max-width:820px) {
                 flex-direction: column;
             }
