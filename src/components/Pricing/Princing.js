@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Button } from '../../globalStyles';
 import { GiCrystalBars } from 'react-icons/gi';
 import { GiCutDiamond, GiRock } from 'react-icons/gi';
@@ -19,59 +19,101 @@ import {
   PricingCardFeature
 } from './Princing.elements';
 
-function Pricing() {
+function Pricing({preço_s, card_ht}) {
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
+            {preço_s ? ( <PricingHeading>Serviços</PricingHeading> ) : ( <PricingHeading>Financiamento</PricingHeading>)}
           <PricingContainer>
-            <PricingCard to='/sign-up'>
-              <PricingCardInfo>
+
+            <PricingCard card_ht='true' to='/sign-up'>
+              <PricingCardInfo >
                 <PricingCardIcon>
                   <GiRock />
                 </PricingCardIcon>
-                <PricingCardPlan>Starter Pack</PricingCardPlan>
-                <PricingCardCost>$99.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+
+              {preço_s ? (
+              <Fragment>
+                <PricingCardPlan>Prata</PricingCardPlan>
+                <PricingCardCost>R$35</PricingCardCost>
+                <PricingCardLength>Mensal</PricingCardLength>
                 <PricingCardFeatures>
-                  <PricingCardFeature>100 New Users</PricingCardFeature>
-                  <PricingCardFeature>$10,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Retargeting analytics</PricingCardFeature>
+                  <PricingCardFeature>Domínio Grátis</PricingCardFeature>
+                  <PricingCardFeature>Banco de dados 512mb</PricingCardFeature>
+                  <PricingCardFeature>Suporte 10/7</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+              </Fragment>) : (
+              <Fragment>
+                <PricingCardPlan>Prata</PricingCardPlan>
+                <PricingCardCost>R$800</PricingCardCost>
+                <PricingCardLength>Entrada</PricingCardLength>
+                <PricingCardCost>R$170</PricingCardCost>
+                <PricingCardLength>Durante 12 meses</PricingCardLength>
+              </Fragment>
+              )}
+
+                <Button primary>Escolher Plano</Button>
               </PricingCardInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
+
+            <PricingCard card_ht='true' to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars />
                 </PricingCardIcon>
-                <PricingCardPlan>Gold Rush</PricingCardPlan>
-                <PricingCardCost>$299.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+
+              {preço_s ? (
+              <Fragment>
+                <PricingCardPlan>Ouro</PricingCardPlan>
+                <PricingCardCost>R$45</PricingCardCost>
+                <PricingCardLength>Mensal</PricingCardLength>
                 <PricingCardFeatures>
-                  <PricingCardFeature>1000 New Users</PricingCardFeature>
-                  <PricingCardFeature>$50,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
+                  <PricingCardFeature>Domínio Grátis</PricingCardFeature>
+                  <PricingCardFeature>Banco de dados 512mb</PricingCardFeature>
+                  <PricingCardFeature>Atualizações mensais</PricingCardFeature>
+                  <PricingCardFeature>Suporte 12/7</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+              </Fragment>) : (
+              <Fragment>
+                <PricingCardPlan>Ouro</PricingCardPlan>
+                <PricingCardCost>R$1000</PricingCardCost>
+                <PricingCardLength>Entrada</PricingCardLength>
+                <PricingCardCost>R$150</PricingCardCost>
+                <PricingCardLength>Durante 12 meses</PricingCardLength>
+              </Fragment>
+              )}
+
+                <Button primary>Escolher</Button>
               </PricingCardInfo>
-            </PricingCard>
-            <PricingCard to='/sign-up'>
+            </PricingCard >
+            <PricingCard to='/sign-up' card_ht='true'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond />
                 </PricingCardIcon>
-                <PricingCardPlan>Diamond Kings</PricingCardPlan>
-                <PricingCardCost>$999.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+             {preço_s ? (
+              <Fragment>
+                <PricingCardPlan>Diamante</PricingCardPlan>
+                <PricingCardCost>R$65</PricingCardCost>
+                <PricingCardLength>Mensal</PricingCardLength>
                 <PricingCardFeatures>
-                  <PricingCardFeature>Unlimited Users</PricingCardFeature>
-                  <PricingCardFeature>Unlimited Budget</PricingCardFeature>
-                  <PricingCardFeature>24/7 Support</PricingCardFeature>
+                  <PricingCardFeature>Domínio Grátis</PricingCardFeature>
+                  <PricingCardFeature>Banco de dados 512mb</PricingCardFeature>
+                  <PricingCardFeature>Atualizações mensais</PricingCardFeature>
+                  <PricingCardFeature>Atualizações de componentes</PricingCardFeature>
+                  <PricingCardFeature>Suporte 24/7</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+              </Fragment>) : (
+              <Fragment>
+                <PricingCardPlan>Diamante</PricingCardPlan>
+                <PricingCardCost>R$1400</PricingCardCost>
+                <PricingCardLength>Entrada</PricingCardLength>
+                <PricingCardCost>R$122</PricingCardCost>
+                <PricingCardLength>Durante 12 meses</PricingCardLength>
+              </Fragment>
+              )}
+                <Button primary>Escolher</Button>
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>

@@ -45,7 +45,7 @@ export const PricingCard = styled(Link)`
   background: #242424;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
   width: 280px;
-  height: 500px;
+  height: ${({card_ht}) => (card_ht ? '510px' : '660px')};
   text-decoration: none;
   border-radius: 4px;
   &:nth-child(2) {
