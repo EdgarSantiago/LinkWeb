@@ -5,6 +5,9 @@ import {FaTimes, FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
 import {Fragment} from 'react'
 import {Button} from '../../globalStyles'
+
+import {Link} from 'react-scroll'
+
 const Navbar = () => {
 
     const [click, setClick] = useState(false)
@@ -12,6 +15,7 @@ const Navbar = () => {
     
     const handleClick = () => setClick(!click)
 
+ 
     const showButton = () => {
         if(window.innerWidth <= 960) {
             setButton(false)
@@ -31,33 +35,41 @@ const Navbar = () => {
         <Nav>
             <NavbarContainer>
                 <NavLogo>
+                <Link to="obj1">
+
                     <NavIcon/>
                     LinkHat
+                </Link>
+
                 </NavLogo>
                 <MobileIcon onClick={handleClick}>{click ? <FaTimes/> : <FaBars/>}</MobileIcon>
-                <NavMenu onClick={handleClick} click={click}>
+                <NavMenu click={click}> 
                     <NavItem>
-                        <NavLinks to="/">Página Inicial</NavLinks>
+                        <Link onClick={handleClick} to="obj1" spy={true} smooth={true}>
+                          <NavLinks >Inicio</NavLinks>
+                        </Link>
                     </NavItem>
 
                     <NavItem>
-                        <NavLinks to="/services">Serviços</NavLinks>
+                        <Link onClick={handleClick} to="services" spy={true} smooth={true}>
+                        <NavLinks >Serviços</NavLinks>
+                        </Link>
                     </NavItem>
 
                     <NavItem>
-                        <NavLinks to="/">Contato</NavLinks>
+                        <Link onClick={handleClick} to="finances" spy={true} smooth={true}>
+                        <NavLinks >Preços</NavLinks>
+                        </Link>
                     </NavItem>
-                    <NavItemBtn>
-                        {button ? (
-                            <NavBtnLink>
-                                <Button primary>Login</Button>
-                            </NavBtnLink>
-                                ) : (
-                                    <NavBtnLink>
-                                        <Button fontBig primary>Login</Button>
-                                    </NavBtnLink>
-                                )}
-                    </NavItemBtn>
+                    
+
+                    <NavItem>
+                        <Link onClick={handleClick} to="footerzin" spy={true} smooth={true}>
+                        <NavLinks >Contato</NavLinks>
+                        </Link>
+                    </NavItem>
+
+                   
                 </NavMenu>
             </NavbarContainer>
         </Nav>

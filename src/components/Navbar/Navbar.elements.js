@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 import{Container} from '../../globalStyles'
-import {AiFillAndroid} from 'react-icons/ai'
+//import {GiLinkedRings} from 'react-icons/gi'
+import {GoGistSecret} from 'react-icons/go'
+
 import {Link} from 'react-router-dom'
+
 
 export const Nav = styled.nav`
 background: #101522;
@@ -31,7 +34,7 @@ font-size: 2rem;
 display: flex;
 align-items: center;
 `
-export const NavIcon = styled(AiFillAndroid)`
+export const NavIcon = styled(GoGistSecret)`
 margin-right: 0.5rem;
 `
 export const MobileIcon = styled.div`

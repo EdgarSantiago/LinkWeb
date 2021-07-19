@@ -1,4 +1,4 @@
-import { FaMagento } from 'react-icons/fa'
+import { GiLinkedRings } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -17,7 +17,7 @@ export const FooterSubscription = styled.section`
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     padding: 24px;
     color: #fff;
 `
@@ -123,10 +123,13 @@ export const SocialMediaWrap = styled.div`
     align-items: center;
     width: 90%;
     max-width: 1000px;
-    margin: 40px auto 0 auto;
+    margin-left: 100px;
+                padding-left: 100px;
             @media screen and (max-width:820px) {
                 flex-direction: column;
-            }
+                 margin: 0px 20px 0 0;
+                padding-right: 3rem;
+}
 `
 
 export const SocialLogo = styled(Link)`
@@ -140,7 +143,7 @@ export const SocialLogo = styled(Link)`
     margin-bottom: 16px;
 `
 
-export const SocialIcon = styled(FaMagento)`
+export const SocialIcon = styled(GiLinkedRings)`
     margin-right: 10px;
 `
 export const WebSiteRights = styled.small`

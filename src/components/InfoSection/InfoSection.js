@@ -1,16 +1,16 @@
 import React from 'react'
 import {Fragment} from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-scroll'
 import { Button, Container } from '../../globalStyles'
 import {InfoSec, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, SubTitle, Img, ImgWrapper
    } from './InfoSection.elements'
 
 
 const InfoSection = ({lightBg, imgStart, topLine, headline, description, primary, lightText, lightTextDesc,
-    lightTopLine, buttonLabel, img, start, alt }) => {
+    lightTopLine, buttonLabel, img, start, alt, dbutton, id_scroll, scrollLx}) => {
     return (
-        <Fragment>
-            <InfoSec lightBg={lightBg}>
+        <Fragment> 
+            <InfoSec id={id_scroll} lightBg={lightBg}>
                 <Container>
                     <InfoRow id="test" imgStart={imgStart}>
                         <InfoColumn>
@@ -18,8 +18,8 @@ const InfoSection = ({lightBg, imgStart, topLine, headline, description, primary
                                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <SubTitle lightTextDesc={lightTextDesc}>{description}</SubTitle>
-                                <Link>
-                                <Button big fontBig primary={primary}>
+                                <Link to={scrollLx} spy={true} smooth={true}>
+                                <Button dbutton={dbutton} big fontBig primary={primary}>
                                     {buttonLabel}
                                 </Button>
                                 </Link>

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Fragment} from 'react'
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 import { Button } from '../../globalStyles'
 import { FooterContainer, FooterSubscription, FooterSubHeading, FooterSubText, Form, FormInput,
     FooterLinksContainer,  FooterLinksWrapper, FooterLinkItems
@@ -11,50 +11,34 @@ const Footer = () => {
     return (
 
         <Fragment>
-            <FooterContainer>
+            <FooterContainer id="footerzin">
                 <FooterSubscription>
                     <FooterSubHeading>
-                        Join oor exclusive aismdoaids osdmioadsk oaisd iojk
+                        Por enquanto só atendemos via Whatsapp
                     </FooterSubHeading>
                         <FooterSubText> 
-                            you can unsub any time
+                            Nosso número: 013997303537
                         </FooterSubText>
-                            <Form>
-                                <FormInput name="email" type="email" placeholder="Seu Email"/>
-                                    <Button fontBig>Subscribe</Button>
-                            </Form>
+                        
+                          
                 </FooterSubscription>
                     <FooterLinksContainer>
                         <FooterLinksWrapper>
+                        
+
                             <FooterLinkItems>
-                                <FooterLinkTitle>About us</FooterLinkTitle>
-                                    <FooterLink to="/">Home</FooterLink>
-                                    <FooterLink to="/sign-up">How it Works</FooterLink>
-                                    <FooterLink to="/Services">Services</FooterLink>
+                                <FooterLinkTitle>Especialiçãções</FooterLinkTitle>
+                                    <FooterLink >WebSites</FooterLink>
+                                    <FooterLink >Aplicativos</FooterLink>
                             </FooterLinkItems>
 
                             <FooterLinkItems>
-                                <FooterLinkTitle>About us</FooterLinkTitle>
-                                    <FooterLink to="/">Home</FooterLink>
-                                    <FooterLink to="/sign-up">How it Works</FooterLink>
-                                    <FooterLink to="/Services">Services</FooterLink>
+                                <FooterLinkTitle>Parceiros</FooterLinkTitle>
+                                    <FooterLink >Quero ser parceiro</FooterLink>
                             </FooterLinkItems>
+
                             </FooterLinksWrapper>
-                            <FooterLinksWrapper>
-                            <FooterLinkItems>
-                                <FooterLinkTitle>About us</FooterLinkTitle>
-                                    <FooterLink to="/">Home</FooterLink>
-                                    <FooterLink to="/sign-up">How it Works</FooterLink>
-                                    <FooterLink to="/Services">Services</FooterLink>
-                            </FooterLinkItems>
-
-                             <FooterLinkItems>
-                                <FooterLinkTitle>About us</FooterLinkTitle>
-                                    <FooterLink to="/">Home</FooterLink>
-                                    <FooterLink to="/sign-up">How it Works</FooterLink>
-                                    <FooterLink to="/Services">Services</FooterLink>
-                            </FooterLinkItems>
-                        </FooterLinksWrapper>
+                          
                     </FooterLinksContainer>
                         <SocialMedia id="SocialMedia">
                             <SocialMediaWrap id="SocialMediaWrap">
@@ -69,20 +53,10 @@ const Footer = () => {
                                         </WebSiteRights>
                                             <SocialIcons>
                                                 <SocialIconLink href='/' target="_blank" aria-label="Facebook">
-                                                    <FaInstagram/>
+                                                 <FaWhatsapp/>
                                                 </SocialIconLink>
 
-                                                <SocialIconLink href='/' target="_blank" aria-label="Facebook">
-                                                    <FaTwitter/>
-                                                </SocialIconLink>
 
-                                                <SocialIconLink href='/' target="_blank" aria-label="Facebook">
-                                                    <FaLinkedin/>
-                                                </SocialIconLink>
-
-                                                <SocialIconLink href='/' target="_blank" aria-label="Facebook">
-                                                    <FaGithub/>
-                                                </SocialIconLink>
                                             </SocialIcons>
                                             
                             </SocialMediaWrap>

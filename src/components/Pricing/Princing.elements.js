@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 export const PricingSection = styled.div`
   padding: 100px 0 160px;
@@ -41,7 +41,7 @@ export const PricingContainer = styled.div`
   }
 `;
 
-export const PricingCard = styled(Link)`
+export const PricingCard = styled.a`
   background: #242424;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
   width: 280px;
@@ -103,3 +103,7 @@ export const PricingCardFeatures = styled.ul`
 export const PricingCardFeature = styled.li`
   margin-bottom: 10px;
 `;
+
+export const SpamColor = styled.span`
+  color: ${props => props.colorSpam};
+`

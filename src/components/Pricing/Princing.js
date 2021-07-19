@@ -1,8 +1,7 @@
 
 import React, { Fragment } from 'react';
 import { Button } from '../../globalStyles';
-import { GiCrystalBars } from 'react-icons/gi';
-import { GiCutDiamond, GiRock } from 'react-icons/gi';
+import { GiCutDiamond, GiCrystalBars } from 'react-icons/gi';
 import { IconContext } from 'react-icons/lib';
 import {
   PricingSection,
@@ -16,21 +15,22 @@ import {
   PricingCardCost,
   PricingCardLength,
   PricingCardFeatures,
-  PricingCardFeature
+  PricingCardFeature,
+  SpamColor
 } from './Princing.elements';
 
-function Pricing({preço_s, card_ht}) {
+function Pricing({preço_s, card_ht, id_scroll}) {
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
-      <PricingSection>
+      <PricingSection id={id_scroll}>
         <PricingWrapper>
             {preço_s ? ( <PricingHeading>Serviços</PricingHeading> ) : ( <PricingHeading>Financiamento</PricingHeading>)}
           <PricingContainer>
 
-            <PricingCard card_ht='true' to='/sign-up'>
+            <PricingCard card_ht='true' href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20prata'>
               <PricingCardInfo >
                 <PricingCardIcon>
-                  <GiRock />
+                  <GiCrystalBars style={{ color: 'white'}} />
                 </PricingCardIcon>
 
               {preço_s ? (
@@ -50,17 +50,23 @@ function Pricing({preço_s, card_ht}) {
                 <PricingCardLength>Entrada</PricingCardLength>
                 <PricingCardCost>R$170</PricingCardCost>
                 <PricingCardLength>Durante 12 meses</PricingCardLength>
+
+                <PricingCardFeatures>
+                  <PricingCardFeature>2 meses grátis</PricingCardFeature>
+                  <PricingCardFeature>serviço <SpamColor colorSpam="white">Prata</SpamColor></PricingCardFeature>
+                </PricingCardFeatures>
+
               </Fragment>
               )}
 
-                <Button primary>Escolher Plano</Button>
+                <Button primary>Escolher</Button>
               </PricingCardInfo>
             </PricingCard>
 
-            <PricingCard card_ht='true' to='/sign-up'>
+            <PricingCard card_ht='true' href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20ouro'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCrystalBars />
+                  <GiCrystalBars style={{ color: 'yellow'}} />
                 </PricingCardIcon>
 
               {preço_s ? (
@@ -81,16 +87,23 @@ function Pricing({preço_s, card_ht}) {
                 <PricingCardLength>Entrada</PricingCardLength>
                 <PricingCardCost>R$150</PricingCardCost>
                 <PricingCardLength>Durante 12 meses</PricingCardLength>
+
+                <PricingCardFeatures>
+                  <PricingCardFeature>4 meses grátis</PricingCardFeature>
+                  <PricingCardFeature>serviço <SpamColor colorSpam="yellow">Ouro</SpamColor></PricingCardFeature>
+                                                      
+                </PricingCardFeatures>
+
               </Fragment>
               )}
 
                 <Button primary>Escolher</Button>
               </PricingCardInfo>
             </PricingCard >
-            <PricingCard to='/sign-up' card_ht='true'>
+            <PricingCard href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20diamante' card_ht='true'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCutDiamond />
+                  <GiCutDiamond style={{ color: '#01A4B7'}}/>
                 </PricingCardIcon>
              {preço_s ? (
               <Fragment>
@@ -111,6 +124,11 @@ function Pricing({preço_s, card_ht}) {
                 <PricingCardLength>Entrada</PricingCardLength>
                 <PricingCardCost>R$122</PricingCardCost>
                 <PricingCardLength>Durante 12 meses</PricingCardLength>
+
+                <PricingCardFeatures>                 
+                   <PricingCardFeature>6 meses grátis  </PricingCardFeature>
+                   <PricingCardFeature>serviço <SpamColor colorSpam="#01A4B7">Diamante</SpamColor></PricingCardFeature>
+                </PricingCardFeatures>
               </Fragment>
               )}
                 <Button primary>Escolher</Button>

@@ -25,6 +25,8 @@
  `
 
  export const Button = styled.button`
+
+    display : ${({dbutton}) => (dbutton ? 'none' : '')};
     border-radius: 4px;
     background: ${({primary}) => (primary? '#4B59F7' : '#0467FB')};
     white-space: nowrap;
