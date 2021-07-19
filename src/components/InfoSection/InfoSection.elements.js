@@ -7,8 +7,7 @@
  `
 
     export const InfoRow = styled.div`
-    padding-left: 150px;
-    display: flex;
+    display: flex; 
     margin: 0 -15px -15px -15px;
     flex-wrap: wrap;
     align-items: center;
