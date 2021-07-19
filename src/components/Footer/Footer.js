@@ -26,7 +26,7 @@ const Footer = () => {
                         <FooterLinksWrapper>
                         
 
-                            <FooterLinkItems>
+                            <FooterLinkItems style={{marginRight: '30px'}}>
                                 <FooterLinkTitle>Especialiçãções</FooterLinkTitle>
                                     <FooterLink >WebSites</FooterLink>
                                     <FooterLink >Aplicativos</FooterLink>

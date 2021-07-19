@@ -27,7 +27,7 @@ function Pricing({preço_s, card_ht, id_scroll}) {
             {preço_s ? ( <PricingHeading>Serviços</PricingHeading> ) : ( <PricingHeading>Financiamento</PricingHeading>)}
           <PricingContainer>
 
-            <PricingCard card_ht='true' href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20prata'>
+            <PricingCard card_ht='true' href='https://wa.me/55013997303537?text=Tenho%20interesse%20no%20financiamento%20prata'>
               <PricingCardInfo >
                 <PricingCardIcon>
                   <GiCrystalBars style={{ color: 'white'}} />
@@ -63,7 +63,7 @@ function Pricing({preço_s, card_ht, id_scroll}) {
               </PricingCardInfo>
             </PricingCard>
 
-            <PricingCard card_ht='true' href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20ouro'>
+            <PricingCard card_ht='true' href='https://wa.me/55013997303537?text=Tenho%20interesse%20no%20financiamento%20ouro'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCrystalBars style={{ color: 'yellow'}} />
@@ -100,7 +100,7 @@ function Pricing({preço_s, card_ht, id_scroll}) {
                 <Button primary>Escolher</Button>
               </PricingCardInfo>
             </PricingCard >
-            <PricingCard href='https://wa.me/55013974244969?text=Tenho%20interesse%20no%20financiamento%20diamante' card_ht='true'>
+            <PricingCard href='https://wa.me/55013997303537?text=Tenho%20interesse%20no%20financiamento%20diamante' card_ht='true'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <GiCutDiamond style={{ color: '#01A4B7'}}/>

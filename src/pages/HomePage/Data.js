@@ -3,7 +3,7 @@ export const homeObjOne = {
     lightBg: false,
     imgStart: '', 
     headline:'Crie seu e-commerce',
-    description: 'Monte seu negócio online com uma plataforma completa e intuitiva. Aproveite que nosso sistema ainda está em fase BETA e está sem taxa de financiamento',
+    description: 'Monte seu negócio online com uma template completa e intuitiva. Aproveite que nosso sistema ainda está em fase BETA e está sem taxa de financiamento',
     primary: true,
     lightText: true,
     lightTextDesc: true,

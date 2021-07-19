@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import{Container} from '../../globalStyles'
-//import {GiLinkedRings} from 'react-icons/gi'
-import {GoGistSecret} from 'react-icons/go'
+import {GiLinkedRings} from 'react-icons/gi'
+//import {GoGistSecret} from 'react-icons/go'
 
 import {Link} from 'react-router-dom'
 
@@ -34,7 +34,7 @@ font-size: 2rem;
 display: flex;
 align-items: center;
 `
-export const NavIcon = styled(GoGistSecret)`
+export const NavIcon = styled(GiLinkedRings)`
 margin-right: 0.5rem;
 `
 export const MobileIcon = styled.div`

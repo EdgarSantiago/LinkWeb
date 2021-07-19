@@ -46,7 +46,7 @@ const Navbar = () => {
                 <NavMenu click={click}> 
                     <NavItem>
                         <Link onClick={handleClick} to="obj1" spy={true} smooth={true}>
-                          <NavLinks >Inicio</NavLinks>
+                          <NavLinks >Início</NavLinks>
                         </Link>
                     </NavItem>
 
