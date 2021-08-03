@@ -27,42 +27,6 @@ function Pricing({preço_s, card_ht, id_scroll}) {
             {preço_s ? ( <PricingHeading>Serviços</PricingHeading> ) : ( <PricingHeading>Financiamento</PricingHeading>)}
           <PricingContainer>
 
-            <PricingCard card_ht='true' href='https://wa.me/55013997303537?text=Tenho%20interesse%20no%20financiamento%20prata'>
-              <PricingCardInfo >
-                <PricingCardIcon>
-                  <GiCrystalBars style={{ color: 'white'}} />
-                </PricingCardIcon>
-
-              {preço_s ? (
-              <Fragment>
-                <PricingCardPlan>Prata</PricingCardPlan>
-                <PricingCardCost>R$35</PricingCardCost>
-                <PricingCardLength>Mensal</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>Domínio Grátis</PricingCardFeature>
-                  <PricingCardFeature>Banco de dados 512mb</PricingCardFeature>
-                  <PricingCardFeature>Suporte 10/7</PricingCardFeature>
-                </PricingCardFeatures>
-              </Fragment>) : (
-              <Fragment>
-                <PricingCardPlan>Prata</PricingCardPlan>
-                <PricingCardCost>R$800</PricingCardCost>
-                <PricingCardLength>Entrada</PricingCardLength>
-                <PricingCardCost>R$170</PricingCardCost>
-                <PricingCardLength>Durante 12 meses</PricingCardLength>
-
-                <PricingCardFeatures>
-                  <PricingCardFeature>2 meses grátis</PricingCardFeature>
-                  <PricingCardFeature>serviço <SpamColor colorSpam="white">Prata</SpamColor></PricingCardFeature>
-                </PricingCardFeatures>
-
-              </Fragment>
-              )}
-
-                <Button primary>Escolher</Button>
-              </PricingCardInfo>
-            </PricingCard>
-
             <PricingCard card_ht='true' href='https://wa.me/55013997303537?text=Tenho%20interesse%20no%20financiamento%20ouro'>
               <PricingCardInfo>
                 <PricingCardIcon>
@@ -72,13 +36,17 @@ function Pricing({preço_s, card_ht, id_scroll}) {
               {preço_s ? (
               <Fragment>
                 <PricingCardPlan>Ouro</PricingCardPlan>
-                <PricingCardCost>R$45</PricingCardCost>
+                <PricingCardCost>R$25</PricingCardCost>
                 <PricingCardLength>Mensal</PricingCardLength>
                 <PricingCardFeatures>
                   <PricingCardFeature>Domínio Grátis</PricingCardFeature>
                   <PricingCardFeature>Banco de dados 512mb</PricingCardFeature>
                   <PricingCardFeature>Atualizações mensais</PricingCardFeature>
                   <PricingCardFeature>Suporte 12/7</PricingCardFeature>
+                  <PricingCardFeature>        </PricingCardFeature>
+                  <PricingCardFeature>        </PricingCardFeature>
+                  <PricingCardFeature>        </PricingCardFeature>
+
                 </PricingCardFeatures>
               </Fragment>) : (
               <Fragment>
@@ -108,7 +76,7 @@ function Pricing({preço_s, card_ht, id_scroll}) {
              {preço_s ? (
               <Fragment>
                 <PricingCardPlan>Diamante</PricingCardPlan>
-                <PricingCardCost>R$65</PricingCardCost>
+                <PricingCardCost>R$55</PricingCardCost>
                 <PricingCardLength>Mensal</PricingCardLength>
                 <PricingCardFeatures>
                   <PricingCardFeature>Domínio Grátis</PricingCardFeature>

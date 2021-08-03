@@ -96,7 +96,7 @@ export const homeObjSix = {
     imgStart: '', 
     topLine: 'Como Comprar',
     headline:'Financie ou compre a vista',
-    description: 'Você pode financiar seu ecommerce sem taxa ou pagar a vista e ganhar um desconto de até 20%',
+    description: 'Você pode financiar seu ecommerce e com um cupom de desconto ganhar um desconto de até 10%',
     primary: false,
     lightText: false,
     lightTextDesc: false,
